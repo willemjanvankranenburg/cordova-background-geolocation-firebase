@@ -34,9 +34,19 @@
             </feature>
         </config-file>
 
-        <framework src="Firebase/Core" type="podspec" spec="" />
-        <framework src="Firebase/Firestore" type="podspec" spec="" />
-
+        <podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/"/>
+            </config>
+            <pods>
+                <pod name="Firebase" spec="" options=":modular_headers => true"/>
+                <pod name="FirebaseCore" spec="" options=":modular_headers => true"/>
+                <pod name="FirebaseFirestore" spec="" options=":modular_headers => true" />
+                <pod name="FirebaseCoreExtension" spec="" options=":modular_headers => true" />
+                <pod name="FirebaseFirestoreInternal" spec="" options=":modular_headers => true" />
+                <pod name="GoogleUtilities" spec="" options=":modular_headers => true" />
+            </pods>
+        </podspec>
 
         <source-file src="src/ios/CDVBackgroundGeolocationFirebase.m" />
         <header-file src="src/ios/CDVBackgroundGeolocationFirebase.h" />
